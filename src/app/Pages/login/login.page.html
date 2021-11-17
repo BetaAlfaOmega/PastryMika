@@ -1,0 +1,72 @@
+<ion-content>
+  <div class="container">
+    <img src="../../../assets/image/cat.jpg" alt="" />
+    <div class="content">
+      <h1>Connexion</h1>
+      <form (ngSubmit)="onSignIn()">
+        <ion-item>
+          <ion-label class="lab" position="floating">Email</ion-label>
+          <ion-input type="email"> </ion-input>
+        </ion-item>
+        <!-- <div
+                class="error"
+                *ngIf="!!f.email.value && !!f.email.hasError('email')"
+              >
+                <ion-text color="danger">
+                  <span>Email invalide</span>
+                </ion-text>
+              </div> -->
+        <ion-item>
+          <ion-label class="lab" position="floating">Mot de passe</ion-label>
+          <ion-input [type]="showPassword ? 'text' : 'password'"></ion-input>
+          <ion-icon
+            slot="end"
+            [name]="showPassword ? 'eye' : 'eye-off'"
+            (click)="showPasswordFunction()"
+          >
+          </ion-icon>
+        </ion-item>
+        <!-- <div *ngIf="isError" class="error1">
+                <ion-icon name="warning-outline"></ion-icon>
+                <div color="danger" [ngSwitch]="errorType">
+                  <ion-text
+                    color="danger"
+                    *ngSwitchCase="errorTypes.emailNotVerifierd"
+                  >
+                    <span class=""> Vérifier votre email </span>
+                  </ion-text>
+                  <ion-text
+                    color="danger"
+                    *ngSwitchCase="errorTypes.wrongPassword"
+                  >
+                    <span class="">Mot de passe invalide</span>
+                  </ion-text>
+                  <ion-text
+                    color="danger"
+                    *ngSwitchCase="errorTypes.userNotFound"
+                  >
+                    <span class="">Utilisateur introuvable</span>
+                  </ion-text>
+                  <ion-text
+                    color="danger"
+                    *ngSwitchCase="errorTypes.coopNotVerified"
+                  >
+                    <span class="">Coopérative en attente de validation</span>
+                  </ion-text>
+                </div>
+              </div> -->
+        <div class="opt">
+          <!-- <div class="flex">
+            <ion-checkbox></ion-checkbox>
+            <p>Me rappeler</p>
+          </div> -->
+
+          <a [routerLink]="['/forgot-password']">Mot de passe oublié?</a>
+        </div>
+        <ion-button type="submit" routerLink="/production">
+          Se connecter
+        </ion-button>
+      </form>
+    </div>
+  </div>
+</ion-content>

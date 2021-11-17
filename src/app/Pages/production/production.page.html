@@ -1,0 +1,40 @@
+<ion-header>
+  <div class="header">
+    Production
+    <div class="notif">
+      <ion-icon name="notifications-outline"></ion-icon>
+      <ion-icon name="notifications-outline"></ion-icon>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content>
+  <h1>Bienvenu</h1>
+  <ion-searchbar
+    mode="ios"
+    placeholder="Rechercher guichet"
+    inputmode="decimal"
+    type="decimal"
+    [debounce]="250"
+    showCancelButton="never"
+  ></ion-searchbar>
+  <ion-datetime></ion-datetime>
+  <app-production-item></app-production-item>
+  <app-production-item></app-production-item>
+
+  <app-production-item></app-production-item>
+
+  <app-production-item></app-production-item>
+  <app-production-item></app-production-item>
+
+  <ion-fab
+    [routerLink]="['/add-production']"
+    vertical="bottom"
+    horizontal="end"
+    slot="fixed"
+  >
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
