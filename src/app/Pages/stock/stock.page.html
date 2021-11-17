@@ -1,9 +1,72 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>stock</ion-title>
-  </ion-toolbar>
+  <div class="header">
+    Stock
+    <div class="notif">
+      <ion-icon name="notifications-outline"></ion-icon>
+      <ion-icon name="notifications-outline"></ion-icon>
+    </div>
+  </div>
 </ion-header>
 
 <ion-content>
+  <div class="content">
+    <ion-searchbar
+      mode="ios"
+      placeholder="Rechercher un ingredient"
+      inputmode="decimal"
+      type="decimal"
+      [debounce]="250"
+      showCancelButton="never"
+    ></ion-searchbar>
+    <h1><span>Quantité</span></h1>
+    <div class="list">
+      <div class="item warning" routerLink="/stock-story">
+        <div class="intro">
+          <img src="" alt="" />
+          <h5>Farine</h5>
+        </div>
+        <p>10</p>
+      </div>
 
+      <div class="item danger">
+        <div class="intro">
+          <img src="" alt="" />
+          <h5>Sucre</h5>
+        </div>
+        <p>10</p>
+      </div>
+
+      <div class="item danger">
+        <div class="intro">
+          <img src="" alt="" />
+          <h5>Beurre</h5>
+        </div>
+        <p>10</p>
+      </div>
+
+      <div class="item">
+        <div class="intro">
+          <img src="" alt="" />
+          <h5>Huile</h5>
+        </div>
+        <p>10</p>
+      </div>
+
+      <div class="item">
+        <div class="intro">
+          <img src="" alt="" />
+          <h5>Chocolat</h5>
+        </div>
+        <p>10</p>
+      </div>
+
+      <div class="item">
+        <div class="intro">
+          <img src="" alt="" />
+          <h5>Raisin</h5>
+        </div>
+        <p>10</p>
+      </div>
+    </div>
+  </div>
 </ion-content>

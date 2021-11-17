@@ -60,6 +60,13 @@ const routes: Routes = [
         (m) => m.AddProductionPageModule
       ),
   },
+  {
+    path: 'stock-story',
+    loadChildren: () =>
+      import('./Pages/stock-story/stock-story.module').then(
+        (m) => m.StockStoryPageModule
+      ),
+  },
 ];
 
 @NgModule({
