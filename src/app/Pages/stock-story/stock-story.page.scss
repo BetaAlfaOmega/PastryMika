@@ -1,0 +1,22 @@
+.content {
+  margin: 20px 10px 10px 10px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+  h5,
+  p {
+    margin: 0;
+  }
+  h5 {
+    width: 50%;
+  }
+  p {
+    text-align: center;
+    width: 25%;
+  }
+}
